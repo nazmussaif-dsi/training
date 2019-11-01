@@ -16,7 +16,7 @@
 `sudo docker logs rincewind_spring`
 
 ### Accessing the Running Instance
-`docker exec -it rincewind_spring /bin/bash`
+`sudo docker exec -it rincewind_spring /bin/bash`
 
 ### Login to docker
 `sudo docker login`
@@ -28,7 +28,7 @@
 `sudo docker push dsinnovators/training:rincewind_spring`
 
 ### Run from any machine
-`sudo docker run --name rincewind_spring -p 8080:8080 dsinnovators/training:rincewind_spring`
+`sudo docker run --name rincewind_spring -p 8080:8080 -d dsinnovators/training:rincewind_spring`
 
 ### Stopping Docker Run
 `sudo docker stop rincewind_spring`

@@ -16,7 +16,7 @@
 `sudo docker logs guybrush_node`
 
 ### Accessing the Running Instance
-`docker exec -it guybrush_node /bin/bash`
+`sudo docker exec -it guybrush_node /bin/bash`
 
 ### Login to docker
 `sudo docker login`
@@ -28,7 +28,7 @@
 `sudo docker push dsinnovators/training:guybrush_node`
 
 ### Run from any machine
-`sudo docker run --name guybrush_node -p 8080:8080 dsinnovators/training:guybrush_node`
+`sudo docker run --name guybrush_node -p 8080:8080 -d dsinnovators/training:guybrush_node`
 
 ### Stopping Docker Run
 `sudo docker stop guybrush_node`

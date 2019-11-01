@@ -1,0 +1,32 @@
+version: "3"
+services:
+  guybrush_node:
+    image: dsinnovators/training:guybrush_node
+    deploy:
+      replicas: 3
+      resources:
+        limits:
+          cpus: "0.1"
+          memory: 50M
+      restart_policy:
+        condition: on-failure
+    ports:
+      - "8001:8080"
+    networks:
+      - webnet
+  rincewind_spring:
+    image: dsinnovators/training:rincewind_spring
+    deploy:
+      replicas: 3
+      resources:
+        limits:
+          cpus: "0.1"
+          memory: 50M
+      restart_policy:
+        condition: on-failure
+    ports:
+      - "8002:8080"
+    networks:
+      - webnet  
+networks:
+  webnet:
